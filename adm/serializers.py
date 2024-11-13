@@ -9,7 +9,6 @@ class ADMSerializer(serializers.ModelSerializer):
         fields = ['_id', 'nome', 'empresa_pertencente', 'id_empresa_pertencente', 'username', 'email', 'password']
 
     def create(self, validated_data):
-        # Não criptografa a senha, salva diretamente como foi fornecida
         password = validated_data.pop('password')
         administrador = Administrador(**validated_data)
         administrador.password = password  # Senha em texto simples
@@ -17,7 +16,6 @@ class ADMSerializer(serializers.ModelSerializer):
         return administrador
 
     def update(self, instance, validated_data):
-        # Atualiza a senha diretamente sem criptografia
         password = validated_data.pop('password', None)
         for attr, value in validated_data.items():
             setattr(instance, attr, value)

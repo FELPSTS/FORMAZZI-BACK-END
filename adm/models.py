@@ -6,7 +6,7 @@ class Administrador(models.Model):
     nome = models.CharField(max_length=255)
     empresa_pertencente = models.CharField(max_length=255)
     id_empresa_pertencente = models.CharField(max_length=255)
-    token = models.CharField(max_length=100, blank=True, null=True)
+    token = models.CharField(max_length=100, blank=True, null=True)#cria no momento de login
     username = models.CharField(max_length=255)
     email = models.EmailField()
     password = models.CharField(max_length=255)

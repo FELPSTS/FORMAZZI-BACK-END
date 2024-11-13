@@ -3,12 +3,10 @@ from rest_framework.response import Response
 from rest_framework.authtoken.models import Token
 from rest_framework import status
 from django.contrib.auth.hashers import check_password
-from django.contrib.auth import authenticate
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.exceptions import NotFound
 from rest_framework.generics import RetrieveAPIView
 from .models import Administrador
-from bson import ObjectId
 from rest_framework import generics
 from .serializers import ADMSerializer
 from rest_framework.permissions import AllowAny  # Permissão para qualquer usuário
