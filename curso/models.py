@@ -1,7 +1,8 @@
-from django.db import models
+from djongo import models 
 from django.core.exceptions import ValidationError
 
-class curso(models.Model):
+class Curso(models.Model):
+    _id = models.ObjectIdField()  # Usando ObjectIdField para o MongoDB, o campo _id será gerado automaticamente
     nome = models.CharField(max_length=255, unique=True)  # Adicionei o valor para max_length
     empresa_pertencente = models.CharField(max_length=255)
     id_empresa_pertencente = models.CharField(max_length=255)
@@ -17,3 +18,5 @@ class curso(models.Model):
         if not (0 <= self.progress <= 100):
             raise ValidationError('O progresso deve estar entre 0 e 100.')
 
+    class Meta:
+        db_table = 'curso_curso'
