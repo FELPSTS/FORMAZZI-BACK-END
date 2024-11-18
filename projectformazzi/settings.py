@@ -22,7 +22,7 @@ INSTALLED_APPS = [#esse bloco de comando serve para você definir os modulos e c
     'funcionario',#funcionario
     'modulo',#modulo
     #'atividade',#atividade
-    #'prova',#prova
+    #'provas',#prova
     'certificado',#certificado
 #-------------------------------------------------------
     'rest_framework.authtoken',
