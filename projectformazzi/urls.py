@@ -17,5 +17,7 @@ urlpatterns = [
     path('funcionario/', include('funcionario.urls')),
     path('acompanhamento/', include('acompanhamento.urls')),
     #path('provas/', include('provas.urls')),
+    #path('recomendacao/', include('recomendacao.urls')),
+    #path('team/', include('team3.urls')),
     path('someview/', SomeView.as_view(), name='someview')  # Corrigido aqui
 ]
