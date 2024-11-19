@@ -4,7 +4,7 @@ from django.contrib.auth.hashers import make_password
 class PROVA(models.Model):
     nome = models.CharField(max_length=255)
     ID_Curso_pertencente = models.CharField(max_length=255)
-    id_funcionario = models.CharField(max_length=255)
+    ID_funcionario = models.CharField(max_length=255)
     pertencente = FileField(upload_to='provas/')
     arquivo_prova = models.FileField(upload_to='provas/')
     progress = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(100)])
